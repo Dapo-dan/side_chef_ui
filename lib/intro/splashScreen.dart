@@ -43,10 +43,13 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.asset(
-              "images/logo.jpg",
-              width: 150,
-              height: 150,
+            CircleAvatar(
+              radius: 30,
+              child: Image.asset(
+                "images/logo.jpg",
+                width: 150,
+                height: 150,
+              ),
             ),
           ],
         ),

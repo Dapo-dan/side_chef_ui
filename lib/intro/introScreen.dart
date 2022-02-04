@@ -1,7 +1,23 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-class IntroScreen extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:side_chef_ui/intro/info1.dart';
+
+class IntroScreen extends StatefulWidget {
   const IntroScreen({Key? key}) : super(key: key);
+
+  @override
+  State<IntroScreen> createState() => _IntroScreenState();
+}
+
+class _IntroScreenState extends State<IntroScreen> {
+  @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    startTime();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,5 +65,15 @@ class IntroScreen extends StatelessWidget {
         ],
       ),
     ));
+  }
+
+  startTime() async {
+    var duration = const Duration(seconds: 10);
+    return Timer(duration, route);
+  }
+
+  route() {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => const Info1()));
   }
 }
