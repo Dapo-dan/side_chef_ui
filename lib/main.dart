@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:side_chef_ui/accountSetup/signUP.dart';
 import 'package:side_chef_ui/intro/splashScreen.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      home: const SignUp(),
     );
   }
 }
