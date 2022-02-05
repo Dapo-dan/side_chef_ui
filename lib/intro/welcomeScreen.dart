@@ -58,7 +58,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                      padding: const EdgeInsets.fromLTRB(80, 10, 80, 10),
                       minimumSize: const Size(40, 5),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -78,7 +78,7 @@ class WelcomeScreen extends StatelessWidget {
                 const Spacer(),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                      padding: const EdgeInsets.fromLTRB(80, 10, 80, 10),
                       minimumSize: const Size(40, 5),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -127,8 +127,9 @@ class WelcomeScreen extends StatelessWidget {
                         Icons.mail,
                         color: Colors.black,
                       ),
+                      SizedBox(width: 10),
                       Text('SIGN UP WITH EMAIL',
-                          style: TextStyle(color: Colors.black)),
+                          style: TextStyle(color: Colors.black, fontSize: 20)),
                     ],
                   ),
                 ),
@@ -141,10 +142,11 @@ class WelcomeScreen extends StatelessWidget {
               height: 10,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
                   'Already have an account?',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
                 TextButton(
                     onPressed: () {
@@ -154,29 +156,36 @@ class WelcomeScreen extends StatelessWidget {
                               builder: (context) => const HomePage()));
                     },
                     child: const Text('LOG IN',
-                        style: TextStyle(color: Colors.white, fontSize: 20)))
+                        style: TextStyle(color: Colors.white, fontSize: 15)))
               ],
             ),
-            Row(
-              children: const [
-                Text('By using SideChef, you agree to our',
-                    style: TextStyle(color: Colors.white, fontSize: 20)),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text('By using SideChef, you agree to our',
+                        style: TextStyle(color: Colors.white, fontSize: 15)),
+                    TextButton(
+                        onPressed: null,
+                        child: Text('Privacy Notice',
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 15))),
+                    Text('and',
+                        style: TextStyle(color: Colors.white, fontSize: 15))
+                  ],
+                ),
                 TextButton(
-                    onPressed: null,
-                    child: Text('Privacy Notice',
-                        style: TextStyle(color: Colors.white, fontSize: 20))),
-                Text('and', style: TextStyle(color: Colors.white, fontSize: 20))
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()));
+                    },
+                    child: const Text('Terms of Use',
+                        style: TextStyle(color: Colors.white, fontSize: 15))),
               ],
             ),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
-                },
-                child: const Text('Terms of Use',
-                    style: TextStyle(color: Colors.white, fontSize: 20))),
             const SizedBox(
               height: 40,
             )
