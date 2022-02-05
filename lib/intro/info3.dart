@@ -10,37 +10,41 @@ class Info3 extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/info3.jpg"),
+            image: AssetImage("images/3.jpg"),
             fit: BoxFit.cover,
           ),
         ),
         child: Column(
           children: [
             const Spacer(),
-            const Text('Personalized Recipe',
+            const Text('Your Favorite Recipies at',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
-            const Text('Personalized Recipe',
+            const Text('Your Fingertips',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
             const SizedBox(
               height: 30,
             ),
-            const Text("Tell us your food preferences and we'll only serve"),
-            const Text("you delicious recipes ideas"),
+            const Text(
+              "Save time on planning by having your favorite",
+              style: TextStyle(fontSize: 20),
+            ),
+            const Text(
+              "recipes always within reach.",
+              style: TextStyle(fontSize: 20),
+            ),
             const SizedBox(
               height: 50,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const TextButton(onPressed: null, child: Text('LOG IN')),
-                const Spacer(),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
                     minimumSize: const Size(400, 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    primary: Colors.black,
-                    onSurface: Colors.grey,
+                    backgroundColor: Colors.black,
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -49,8 +53,8 @@ class Info3 extends StatelessWidget {
                           builder: (context) => const WelcomeScreen()),
                     );
                   },
-                  child:
-                      const Text('NEXT', style: TextStyle(color: Colors.black)),
+                  child: const Text('GET STARTED',
+                      style: TextStyle(color: Colors.white)),
                 ),
               ],
             ),

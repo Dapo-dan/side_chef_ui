@@ -10,7 +10,7 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/welcome.jpg"),
+            image: AssetImage("images/wel.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -31,7 +31,10 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 Text(
                   'CHEF',
-                  style: TextStyle(fontSize: 40, color: Colors.white),
+                  style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 )
               ],
             ),
@@ -50,15 +53,16 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Row(
               children: [
+                const SizedBox(
+                  width: 30,
+                ),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                    minimumSize: const Size(400, 50),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    primary: Colors.white,
-                    onSurface: Colors.grey,
-                  ),
+                      padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                      minimumSize: const Size(40, 5),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      backgroundColor: Colors.white),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -74,13 +78,11 @@ class WelcomeScreen extends StatelessWidget {
                 const Spacer(),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                    minimumSize: const Size(400, 50),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    primary: Colors.blue,
-                    onSurface: Colors.grey,
-                  ),
+                      padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                      minimumSize: const Size(40, 5),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      backgroundColor: Colors.indigo[800]),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -92,44 +94,58 @@ class WelcomeScreen extends StatelessWidget {
                     Icons.facebook_sharp,
                   ),
                 ),
+                const SizedBox(
+                  width: 30,
+                ),
               ],
             ),
             const SizedBox(
               height: 15,
             ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                minimumSize: const Size(400, 50),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                primary: Colors.white,
-                onSurface: Colors.grey,
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const WelcomeScreen()),
-                );
-              },
-              child: Row(
-                children: const [
-                  Icon(
-                    Icons.mail,
-                    color: Colors.black,
+            Row(
+              children: [
+                const SizedBox(
+                  width: 30,
+                ),
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                      minimumSize: const Size(400, 50),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      backgroundColor: Colors.white),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const WelcomeScreen()),
+                    );
+                  },
+                  child: Row(
+                    children: const [
+                      Icon(
+                        Icons.mail,
+                        color: Colors.black,
+                      ),
+                      Text('SIGN UP WITH EMAIL',
+                          style: TextStyle(color: Colors.black)),
+                    ],
                   ),
-                  Text('SIGN UP WITH EMAIL',
-                      style: TextStyle(color: Colors.black)),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  width: 30,
+                ),
+              ],
             ),
             const SizedBox(
               height: 10,
             ),
             Row(
               children: [
-                const Text('Already have an account?'),
+                const Text(
+                  'Already have an account?',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
                 TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -137,14 +153,19 @@ class WelcomeScreen extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => const HomePage()));
                     },
-                    child: const Text('LOG IN'))
+                    child: const Text('LOG IN',
+                        style: TextStyle(color: Colors.white, fontSize: 20)))
               ],
             ),
             Row(
               children: const [
-                Text('By using SideChef, you agree to our '),
-                TextButton(onPressed: null, child: Text('Privacy Notice')),
-                Text('and')
+                Text('By using SideChef, you agree to our',
+                    style: TextStyle(color: Colors.white, fontSize: 20)),
+                TextButton(
+                    onPressed: null,
+                    child: Text('Privacy Notice',
+                        style: TextStyle(color: Colors.white, fontSize: 20))),
+                Text('and', style: TextStyle(color: Colors.white, fontSize: 20))
               ],
             ),
             TextButton(
@@ -154,7 +175,8 @@ class WelcomeScreen extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => const HomePage()));
                 },
-                child: const Text('Terms of Use')),
+                child: const Text('Terms of Use',
+                    style: TextStyle(color: Colors.white, fontSize: 20))),
             const SizedBox(
               height: 40,
             )

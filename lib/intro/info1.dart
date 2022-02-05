@@ -10,7 +10,7 @@ class Info1 extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/info1.jpg"),
+            image: AssetImage("images/1.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -19,28 +19,41 @@ class Info1 extends StatelessWidget {
             const Spacer(),
             const Text('Personalized Recipe',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
-            const Text('Personalized Recipe',
+            const Text('Discovery',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
             const SizedBox(
               height: 30,
             ),
-            const Text("Tell us your food preferences and we'll only serve"),
-            const Text("you delicious recipes ideas"),
+            const Text(
+              "Tell us your food preferences and we'll only serve",
+              style: TextStyle(fontSize: 20),
+            ),
+            const Text(
+              "you delicious recipes ideas",
+              style: TextStyle(fontSize: 20),
+            ),
             const SizedBox(
               height: 50,
             ),
             Row(
               children: [
-                const TextButton(onPressed: null, child: Text('LOG IN')),
+                const SizedBox(
+                  width: 30,
+                ),
+                const TextButton(
+                    onPressed: null,
+                    child: Text(
+                      'LOG IN',
+                      style: TextStyle(fontSize: 20),
+                    )),
                 const Spacer(),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                    minimumSize: const Size(400, 50),
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    minimumSize: const Size(40, 5),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    primary: Colors.black,
-                    onSurface: Colors.grey,
+                    backgroundColor: Colors.black,
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -49,7 +62,10 @@ class Info1 extends StatelessWidget {
                     );
                   },
                   child:
-                      const Text('NEXT', style: TextStyle(color: Colors.black)),
+                      const Text('NEXT', style: TextStyle(color: Colors.white)),
+                ),
+                const SizedBox(
+                  width: 30,
                 ),
               ],
             ),
