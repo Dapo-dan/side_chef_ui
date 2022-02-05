@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_const
+
 import 'package:flutter/material.dart';
 
 class Info1 extends StatelessWidget {
@@ -5,6 +7,52 @@ class Info1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/info1.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          children: [
+            const Spacer(),
+            const Text('Personalized Recipe',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
+            const Text('Personalized Recipe',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
+            const SizedBox(
+              height: 30,
+            ),
+            const Text("Tell us your food preferences and we'll only serve"),
+            const Text("you delicious recipes ideas"),
+            const SizedBox(
+              height: 50,
+            ),
+            Row(
+              children: [
+                const TextButton(onPressed: null, child: Text('LOG IN')),
+                const Spacer(),
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                    minimumSize: const Size(400, 50),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    primary: Colors.black,
+                    onSurface: Colors.grey,
+                  ),
+                  onPressed: null,
+                  child:
+                      const Text('NEXT', style: TextStyle(color: Colors.black)),
+                ),
+              ],
+            ),
+            const SizedBox(height: 40)
+          ],
+        ),
+      ),
+    );
   }
 }
