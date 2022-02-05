@@ -1,6 +1,5 @@
-// ignore_for_file: unnecessary_const
-
 import 'package:flutter/material.dart';
+import 'package:side_chef_ui/intro/info2.dart';
 
 class Info1 extends StatelessWidget {
   const Info1({Key? key}) : super(key: key);
@@ -43,7 +42,12 @@ class Info1 extends StatelessWidget {
                     primary: Colors.black,
                     onSurface: Colors.grey,
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Info2()),
+                    );
+                  },
                   child:
                       const Text('NEXT', style: TextStyle(color: Colors.black)),
                 ),
