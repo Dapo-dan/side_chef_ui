@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:side_chef_ui/accountSetup/signUP.dart';
 import 'package:side_chef_ui/home/homePage.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -117,8 +118,7 @@ class WelcomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const WelcomeScreen()),
+                      MaterialPageRoute(builder: (context) => const SignUp()),
                     );
                   },
                   child: Row(

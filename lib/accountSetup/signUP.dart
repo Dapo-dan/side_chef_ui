@@ -5,6 +5,28 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Icon(Icons.arrow_back),
+          const Text(
+            'Sign Up',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          const Text(
+            'Save delicious recipes and get personalized',
+            style: TextStyle(fontSize: 10),
+          ),
+          const Text(
+            'content',
+            style: TextStyle(fontSize: 10),
+          ),
+          Column(
+            children: [TextFormField()],
+          )
+        ],
+      ),
+    );
   }
 }
