@@ -43,17 +43,42 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
             const SizedBox(
               height: 15,
             ),
-            const SizedBox(
-              height: 200,
-              width: 200,
-              child: Card(
-                child: ListTile(
-                  title: Text("Codesinsider.com"),
+            Card(
+              child: Container(
+                height: 100,
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Expanded(
+                          child: Image.asset("images/meat.jpg"),
+                          flex: 2,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.topLeft,
+                        child: Column(
+                          children: const [
+                            Expanded(
+                              flex: 5,
+                              child: ListTile(
+                                title: Text("None"),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      flex: 8,
+                    ),
+                  ],
                 ),
-                elevation: 8,
-                shadowColor: Colors.green,
-                margin: EdgeInsets.all(20),
               ),
+              elevation: 8,
+              margin: const EdgeInsets.all(10),
             ),
             const SizedBox(
               height: 10,
