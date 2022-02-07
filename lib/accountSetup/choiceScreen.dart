@@ -29,7 +29,8 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(8.0, 50, 8, 10),
         child: Column(
           children: [
             const Text(
@@ -46,6 +47,7 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
             Card(
               child: Container(
                 height: 100,
+                width: 100,
                 color: Colors.white,
                 child: Column(
                   children: [
@@ -53,26 +55,18 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(10),
                         child: Expanded(
-                          child: Image.asset("images/meat.jpg"),
-                          flex: 2,
+                          child: Image.asset(
+                            "images/meat.jpg",
+                          ),
                         ),
                       ),
                     ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.topLeft,
-                        child: Column(
-                          children: const [
-                            Expanded(
-                              flex: 5,
-                              child: ListTile(
-                                title: Text("None"),
-                              ),
-                            ),
-                          ],
+                    Column(
+                      children: const [
+                        ListTile(
+                          title: Text("None"),
                         ),
-                      ),
-                      flex: 8,
+                      ],
                     ),
                   ],
                 ),
