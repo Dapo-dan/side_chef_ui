@@ -80,14 +80,14 @@ class PurposeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.white,
                         ),
-                        height: 170,
+                        height: 190,
                         width: 170,
                         child: Column(
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(5),
                               child: Container(
-                                height: 90,
+                                height: 150,
                                 padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
@@ -126,19 +126,19 @@ class PurposeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.white,
                         ),
-                        height: 170,
+                        height: 190,
                         width: 170,
                         child: Column(
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(5),
                               child: Container(
-                                height: 90,
+                                height: 150,
                                 padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   image: const DecorationImage(
-                                    image: AssetImage("images/meat.jpg"),
+                                    image: AssetImage("images/plan.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -147,7 +147,7 @@ class PurposeScreen extends StatelessWidget {
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text("Eat healthy"),
+                            const Text("Plan better"),
                           ],
                         ),
                       ),
@@ -167,19 +167,19 @@ class PurposeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.white,
                         ),
-                        height: 170,
+                        height: 190,
                         width: 170,
                         child: Column(
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(5),
                               child: Container(
-                                height: 90,
+                                height: 150,
                                 padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   image: const DecorationImage(
-                                    image: AssetImage("images/vegan.jpg"),
+                                    image: AssetImage("images/learn.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -188,7 +188,7 @@ class PurposeScreen extends StatelessWidget {
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text("Budget-Friendly"),
+                            const Text("Learn to cook"),
                           ],
                         ),
                       ),
@@ -201,8 +201,11 @@ class PurposeScreen extends StatelessWidget {
                   height: 20,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    const SizedBox(
+                      width: 25,
+                    ),
                     Card(
                       shape: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
@@ -213,19 +216,19 @@ class PurposeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.white,
                         ),
-                        height: 170,
+                        height: 190,
                         width: 170,
                         child: Column(
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(5),
                               child: Container(
-                                height: 90,
+                                height: 150,
                                 padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   image: const DecorationImage(
-                                    image: AssetImage("images/meat.jpg"),
+                                    image: AssetImage("images/quick.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -234,7 +237,7 @@ class PurposeScreen extends StatelessWidget {
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text("Eat healthy"),
+                            const Text("Quick & Easy"),
                           ],
                         ),
                       ),
@@ -243,44 +246,6 @@ class PurposeScreen extends StatelessWidget {
                     ),
                     const SizedBox(
                       width: 30,
-                    ),
-                    Card(
-                      shape: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                          borderSide:
-                              const BorderSide(color: Colors.white, width: 1)),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white,
-                        ),
-                        height: 170,
-                        width: 170,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(5),
-                              child: Container(
-                                height: 90,
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  image: const DecorationImage(
-                                    image: AssetImage("images/vegan.jpg"),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text("Budget-Friendly"),
-                          ],
-                        ),
-                      ),
-                      elevation: 8,
-                      margin: const EdgeInsets.all(5),
                     ),
                   ],
                 ),
