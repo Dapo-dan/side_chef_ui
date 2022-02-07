@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:side_chef_ui/home/homePage.dart';
 
 class PurposeScreen extends StatelessWidget {
   const PurposeScreen({Key? key}) : super(key: key);
@@ -266,8 +267,7 @@ class PurposeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const PurposeScreen()),
+                      MaterialPageRoute(builder: (context) => const HomePage()),
                     );
                   },
                   child: const Text('CONTINUE',
