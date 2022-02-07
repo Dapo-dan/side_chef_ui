@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:side_chef_ui/accountSetup/choiceScreen.dart';
+import 'package:side_chef_ui/accountSetup/purposeScreen.dart';
 import 'package:side_chef_ui/intro/splashScreen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ChoiceScreen(),
+      home: const PurposeScreen(),
     );
   }
 }
