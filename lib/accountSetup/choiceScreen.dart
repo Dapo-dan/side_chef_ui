@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:side_chef_ui/accountSetup/purposeScreen.dart';
 
 class ChoiceScreen extends StatefulWidget {
   const ChoiceScreen({Key? key}) : super(key: key);
@@ -30,52 +31,318 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(8.0, 50, 8, 10),
+        padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
         child: Column(
           children: [
             const Text(
               'Do you follow any of the',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
             ),
             const Text(
               'following diets?',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
             ),
             const SizedBox(
-              height: 15,
+              height: 20,
             ),
-            Card(
-              child: Container(
-                height: 100,
-                width: 100,
-                color: Colors.white,
-                child: Column(
+            const Text(
+              "We'll only show recipes for your diet.",
+              style: TextStyle(fontSize: 25),
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            Column(
+              children: [
+                Row(
                   children: [
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Expanded(
-                          child: Image.asset(
-                            "images/meat.jpg",
-                          ),
+                    Card(
+                      shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1)),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        height: 130,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Container(
+                                height: 90,
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: const DecorationImage(
+                                    image: AssetImage("images/meat.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text("None"),
+                          ],
                         ),
                       ),
+                      elevation: 8,
+                      margin: const EdgeInsets.all(5),
                     ),
-                    Column(
-                      children: const [
-                        ListTile(
-                          title: Text("None"),
+                    Card(
+                      shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1)),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
                         ),
-                      ],
+                        height: 130,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Container(
+                                height: 90,
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: const DecorationImage(
+                                    image: AssetImage("images/vegan.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text("Vegan"),
+                          ],
+                        ),
+                      ),
+                      elevation: 8,
+                      margin: const EdgeInsets.all(5),
+                    ),
+                    Card(
+                      shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1)),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        height: 130,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Container(
+                                height: 90,
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: const DecorationImage(
+                                    image: AssetImage("images/vegetarian.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text("Vegetarian"),
+                          ],
+                        ),
+                      ),
+                      elevation: 8,
+                      margin: const EdgeInsets.all(5),
+                    ),
+                    Card(
+                      shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1)),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        height: 130,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Container(
+                                height: 90,
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: const DecorationImage(
+                                    image: AssetImage("images/pescatarian.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text("Pescatarian"),
+                          ],
+                        ),
+                      ),
+                      elevation: 8,
+                      margin: const EdgeInsets.all(5),
                     ),
                   ],
                 ),
-              ),
-              elevation: 8,
-              margin: const EdgeInsets.all(10),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Card(
+                      shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1)),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        height: 130,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Container(
+                                height: 90,
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: const DecorationImage(
+                                    image: AssetImage("images/paleo.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text("Paleo"),
+                          ],
+                        ),
+                      ),
+                      elevation: 8,
+                      margin: const EdgeInsets.all(5),
+                    ),
+                    Card(
+                      shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1)),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        height: 130,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Container(
+                                height: 90,
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: const DecorationImage(
+                                    image: AssetImage("images/lowcarb.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text("Low-Carb"),
+                          ],
+                        ),
+                      ),
+                      elevation: 8,
+                      margin: const EdgeInsets.all(5),
+                    ),
+                    Card(
+                      shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide:
+                              const BorderSide(color: Colors.white, width: 1)),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        height: 130,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Container(
+                                height: 90,
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: const DecorationImage(
+                                    image: AssetImage("images/keto.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text("Keto"),
+                          ],
+                        ),
+                      ),
+                      elevation: 8,
+                      margin: const EdgeInsets.all(5),
+                    ),
+                  ],
+                ),
+              ],
             ),
             const SizedBox(
-              height: 10,
+              height: 70,
+            ),
+            const Text(
+              'Any ingredient allergies or intolerances?',
+              style: TextStyle(fontSize: 25),
+            ),
+            const SizedBox(
+              height: 30,
             ),
             Wrap(
               spacing: 20,
@@ -98,11 +365,11 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ChoiceScreen()),
+                          builder: (context) => const PurposeScreen()),
                     );
                   },
-                  child:
-                      const Text('NEXT', style: TextStyle(color: Colors.white)),
+                  child: const Text('CONTINUE',
+                      style: TextStyle(color: Colors.white)),
                 ),
               ],
             ),
