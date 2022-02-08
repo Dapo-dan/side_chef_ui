@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                 children: const [
                   Text(
                     'Meal Plans Made Easy',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                   ),
                   Spacer(),
                   TextButton(
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                 height: 30,
               ),
               Container(
-                  height: 500,
+                  height: 400,
                   child: ListView(
                     // This next line does the trick.
                     scrollDirection: Axis.horizontal,
@@ -87,6 +87,28 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.grey),
+                                    child: const Text(
+                                      'PREMIUM',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  const CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.grey,
+                                      child: Icon(
+                                        Icons.turned_in_not_outlined,
+                                        color: Colors.white,
+                                      ))
+                                ],
+                              ),
                               const Spacer(),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -122,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           image: const DecorationImage(
-                            image: AssetImage("images/2].jpg"),
+                            image: AssetImage("images/quick.jpg"),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -131,6 +153,28 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.grey),
+                                    child: const Text(
+                                      'PREMIUM',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  const CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.grey,
+                                      child: Icon(
+                                        Icons.turned_in_not_outlined,
+                                        color: Colors.white,
+                                      ))
+                                ],
+                              ),
                               const Spacer(),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,11 +189,11 @@ class _HomePageState extends State<HomePage> {
                                         );
                                       },
                                       child: const Text(
-                                        "Gloria Shute",
+                                        "Quick & Friendly Family Dinners",
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 15),
                                       )),
-                                  const Text("Gateway to Presence",
+                                  const Text("The Pretty Plus",
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 20))
                                 ],
@@ -166,7 +210,222 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           image: const DecorationImage(
-                            image: AssetImage("images/3.jpg"),
+                            image: AssetImage("images/labor.jpg"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.grey),
+                                    child: const Text(
+                                      'PREMIUM',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  const CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.grey,
+                                      child: Icon(
+                                        Icons.turned_in_not_outlined,
+                                        color: Colors.white,
+                                      ))
+                                ],
+                              ),
+                              const Spacer(),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()),
+                                        );
+                                      },
+                                      child: const Text(
+                                        "Labor Day Meal",
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 15),
+                                      )),
+                                  const Text("Beverly Ng at SideChef",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20))
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                    ],
+                  )),
+              const SizedBox(height: 50),
+              const Text(
+                'Trending Now',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                  height: 400,
+                  child: ListView(
+                    // This next line does the trick.
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      const SizedBox(width: 20),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: const DecorationImage(
+                            image: AssetImage("images/teriyakiChicken.jpg"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        width: 400.0,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(7),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.white),
+                                    child: const Text(
+                                      'Date Night',
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  const CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.grey,
+                                      child: Icon(
+                                        Icons.turned_in_not_outlined,
+                                        color: Colors.white,
+                                      ))
+                                ],
+                              ),
+                              const Spacer(),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()),
+                                        );
+                                      },
+                                      child: const Text(
+                                        "Teriyaki Chicken",
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 15),
+                                      )),
+                                  const Text("Live, Eat , Learn",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20))
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        width: 400.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: const DecorationImage(
+                            image: AssetImage("images/quick.jpg"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(7),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.white),
+                                    child: const Text(
+                                      'Appetizer',
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  const CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.grey,
+                                      child: Icon(
+                                        Icons.turned_in_not_outlined,
+                                        color: Colors.white,
+                                      ))
+                                ],
+                              ),
+                              const Spacer(),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()),
+                                        );
+                                      },
+                                      child: const Text(
+                                        "Quick & Friendly Family Dinners",
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 15),
+                                      )),
+                                  const Text("The Pretty Plus",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20))
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        width: 400.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: const DecorationImage(
+                            image: AssetImage("images/labor.jpg"),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -189,12 +448,11 @@ class _HomePageState extends State<HomePage> {
                                         );
                                       },
                                       child: const Text(
-                                        "Jude Payton",
+                                        "Labor Day Meal",
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 15),
                                       )),
-                                  const Text(
-                                      "Understanding the process of consistency",
+                                  const Text("Beverly Ng at SideChef",
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 20))
                                 ],
@@ -208,6 +466,29 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   )),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'Explore Premium Recipes',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                children: const [
+                  Text(
+                    '30-Minute Dinner Ideas',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
+                  Spacer(),
+                  TextButton(
+                    onPressed: null,
+                    child: Text('VIEW ALL'),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
