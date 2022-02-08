@@ -13,9 +13,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.fromLTRB(10, 70, 10, 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        padding: const EdgeInsets.all(20),
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: [
             Row(
               children: [
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                           builder: (context) => const PurposeScreen()),
                     );
                   },
-                  child: Icon(Icons.card_travel),
+                  child: const Icon(Icons.card_travel),
                 ),
               ],
             ),
@@ -48,7 +48,166 @@ class _HomePageState extends State<HomePage> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50)),
             const SizedBox(
               height: 20,
-            )
+            ),
+            Column(),
+            Row(
+              children: const [
+                Text(
+                  'Meal Plans Made Easy',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+                Spacer(),
+                TextButton(
+                  onPressed: null,
+                  child: Text('VIEW ALL'),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+                height: 500,
+                child: ListView(
+                  // This next line does the trick.
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    const SizedBox(width: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        image: const DecorationImage(
+                          image: AssetImage("images/1.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      width: 400.0,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Spacer(),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const HomePage()),
+                                      );
+                                    },
+                                    child: const Text(
+                                      "Shadow Lawson",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 15),
+                                    )),
+                                const Text("Pathway to success",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20))
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      width: 400.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        image: const DecorationImage(
+                          image: AssetImage("images/2].jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Spacer(),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const HomePage()),
+                                      );
+                                    },
+                                    child: const Text(
+                                      "Gloria Shute",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 15),
+                                    )),
+                                const Text("Gateway to Presence",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20))
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      width: 400.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        image: const DecorationImage(
+                          image: AssetImage("images/3.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Spacer(),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const HomePage()),
+                                      );
+                                    },
+                                    child: const Text(
+                                      "Jude Payton",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 15),
+                                    )),
+                                const Text(
+                                    "Understanding the process of consistency",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20))
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                  ],
+                )),
           ],
         ),
       ),
