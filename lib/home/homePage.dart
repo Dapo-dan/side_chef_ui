@@ -476,6 +476,159 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 30,
               ),
+              Container(
+                height: 500,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    const SizedBox(width: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(20),
+                                  topRight: Radius.circular(20)),
+                              image: DecorationImage(
+                                image: AssetImage("images/teriyakiChicken.jpg"),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            width: 400.0,
+                            height: 350,
+                            child: Padding(
+                              padding: const EdgeInsets.all(20.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.all(7),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Colors.white),
+                                        child: const Text(
+                                          'Cocktails',
+                                          style: TextStyle(color: Colors.black),
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      const CircleAvatar(
+                                          radius: 20,
+                                          backgroundColor: Colors.teal,
+                                          child: Icon(
+                                            Icons.lock,
+                                            color: Colors.white,
+                                          ))
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const HomePage()),
+                                            );
+                                          },
+                                          child: const Text(
+                                            "Teriyaki Chicken",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15),
+                                          )),
+                                      const Text("Live, Eat , Learn",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 20))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.teal),
+                                child: const Text(
+                                  'PREMIUM',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              const Icon(
+                                Icons.star,
+                                color: Colors.grey,
+                              ),
+                              const Icon(Icons.star, color: Colors.grey),
+                              const Icon(Icons.star, color: Colors.grey),
+                              const Icon(Icons.star, color: Colors.grey),
+                              const Icon(Icons.star, color: Colors.grey),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const Text(
+                            'St. Germain Spritz',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25),
+                          ),
+                          const Spacer(),
+                          Row(
+                            children: [
+                              const Text(
+                                '5 ingredients',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 15),
+                              ),
+                              const SizedBox(
+                                width: 50,
+                              ),
+                              OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    backgroundColor: Colors.black,
+                                  ),
+                                  onPressed: null,
+                                  child: Row(
+                                    children: const [
+                                      Text(
+                                        'ADD',
+                                        style: TextStyle(color: Colors.white),
+                                      )
+                                    ],
+                                  ))
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Row(
                 children: const [
                   Text(
